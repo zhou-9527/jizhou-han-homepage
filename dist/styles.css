@@ -40,6 +40,8 @@ h2{font-size:37px;line-height:1.15;letter-spacing:-1.5px}aside h2{font-size:27px
 .full-list:hover,.paper-links a:hover,.timeline a:hover,footer a:hover{text-decoration:underline;text-underline-offset:3px}
 .paper{display:grid;grid-template-columns:162px 1fr;gap:23px;align-items:start;padding:24px 0;border-bottom:1px solid var(--line)}
 .paper-group[hidden],.paper[hidden]{display:none}
+.paper-figure{grid-column:1;grid-row:1;min-width:0}
+.paper-info{grid-column:2;grid-row:1;min-width:0}
 .paper-group{margin-top:26px}
 .paper-group>h3{font:600 20px/1.35 var(--sans)}
 .paper:not(:has(.thumb)):not([hidden]){display:block}

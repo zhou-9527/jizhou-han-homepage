@@ -67,7 +67,7 @@ def render(chinese):
         venue, year, kind, title, authors, figure, url = paper
         badge = f'<span class="oral">{tr("Oral", "口头报告")}</span>' if url == CVPR else ""
         caption = figure_descriptions.get(figure, title)
-        preview = f'<a class="thumb" href="{url}" aria-label="{escape(title)}"><img src="assets/{figure}.webp" loading="lazy" alt="{escape(caption)}"></a>' if figure else ""
+        preview = f'<div class="paper-figure"><a class="thumb" href="{url}" aria-label="{escape(title)}"><img src="assets/{figure}.webp" loading="lazy" alt="{escape(caption)}"></a></div>' if figure else ""
         byline = authors.replace("Jizhou Han", "<strong>Jizhou Han</strong>")
         paper_label = "arXiv" if url == GOAL else tr("Paper", "论文")
         actions = link(url, paper_label + icon("arrow"))
