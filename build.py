@@ -116,7 +116,7 @@ def render(chinese):
 <p class="affiliation">{tr("Xi’an Jiaotong University","西安交通大学")}</p>
 <p class="bio">{tr("I study how visual models can discover new categories while remembering the ones they already know. My work at the Institute of Artificial Intelligence and Robotics, advised by Prof. Yihong Gong, draws on continual learning and human analogical reasoning.","我在西安交通大学人工智能与机器人研究所攻读博士学位，导师为龚怡宏教授。我的研究关注视觉模型如何在识别已知类别的同时发现新类别，并探索持续学习和人类类比推理如何帮助模型保留和运用已有知识。")}</p>
 <div class="profile-links">{link("mailto:"+EMAIL,icon("mail")+tr("Email","邮箱"),"primary")}{link(SCHOLAR,"Google Scholar")}{link("https://dblp.org/pid/339/5410.html","DBLP")}</div></div>
-<figure class="portrait"><div class="photo-mat"><img width="1672" height="2508" src="assets/jizhou-han.jpg" alt="{tr("Portrait of Jizhou Han","韩季洲肖像")}"></div>
+<figure class="portrait"><div class="photo-mat"><img width="1913" height="1280" src="assets/jizhou-han.jpg?v=20261118" alt="{tr("Jizhou Han beside a cat mural","韩季洲与猫咪壁画")}"></div>
 <figcaption>{icon("pin")}{tr("Xi’an, China","中国 · 西安")}</figcaption></figure></section>
 <div class="content-grid"><section class="pubs" id="publications"><h2>{tr("Selected publications","代表论文")}</h2>
 <div class="pub-tools"><div class="filters" role="group" aria-label="{tr("Filter by publication type","按论文类型筛选")}">{filters}</div>
