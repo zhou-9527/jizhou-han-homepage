@@ -81,7 +81,7 @@ def render(chinese):
         ("2026", tr("National Scholarship", "国家奖学金")),
         ("2026", tr("Bambu Lab Scholarship", "拓竹奖学金")),
         ("2023", tr("Beijing Outstanding Graduate", "北京市优秀毕业生")),
-        ("2022", tr("Jiefang Linghang Scholarship, FAW Jiefang Automotive Company", "解放领航奖学金")),
+        ("2022", tr("Jiefang Linghang Scholarship, FAW Jiefang Automotive Company", "一汽解放领航奖学金")),
         ("2022", tr("Beijing Institute of Technology Robotics Scholarship", "北京理工大学机器人奖学金")),
     ]
     honors_html = "".join(f'<li><time>{year}</time><span>{title}</span></li>' for year,title in honors)
