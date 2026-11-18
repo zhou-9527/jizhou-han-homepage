@@ -103,6 +103,16 @@ def render(chinese):
     filters = "".join(f'<button type="button" data-filter="{kind}" aria-pressed="{str(kind=="all").lower()}">{label}</button>' for kind,label in [
         ("all",tr("All","全部")),("conference",tr("Conferences","会议")),("journal",tr("Journals","期刊"))])
     about, publications, background = tr("About","简介"), tr("Publications","论文"), tr("Background","学术经历")
+    iair_link = link("https://iair.xjtu.edu.cn/index.htm", "IAIR")
+    advisor_link = link("https://faculty.xjtu.edu.cn/ygong/zh_CN/index.htm", tr("Yihong Gong", "龚怡宏"))
+    bio_intro = tr(
+        f"I am a Ph.D. student at the Institute of Artificial Intelligence and Robotics ({iair_link}), Xi’an Jiaotong University (XJTU), under the supervision of Prof. {advisor_link} (IEEE Fellow).",
+        f"我目前在西安交通大学人工智能与机器人研究所（{iair_link}）攻读博士学位，导师为{advisor_link}教授（IEEE Fellow）。",
+    )
+    bio_research = tr(
+        "My research focuses on generalized category discovery, continual learning, and test-time adaptation. I am particularly interested in how visual models can discover novel categories and adapt to new environments while retaining previously acquired knowledge.",
+        "我的研究主要围绕广义类别发现、持续学习和测试时自适应展开，重点关注视觉模型如何在保留已有知识的同时，发现新类别并适应新环境。",
+    )
     return f'''<!doctype html>
 <html lang="{tr("en","zh-CN")}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{tr("Jizhou Han | Academic Homepage","韩季洲 | 学术主页")}</title>
@@ -115,7 +125,7 @@ def render(chinese):
 <h1>{tr("Jizhou Han","韩季洲")} <span lang="{tr("zh-CN","en")}">{tr("韩季洲","Jizhou Han")}</span></h1>
 <p class="position">{tr("Ph.D. student in Artificial Intelligence","人工智能博士研究生")}</p>
 <p class="affiliation">{tr("Xi’an Jiaotong University","西安交通大学")}</p>
-<p class="bio">{tr("I study how visual models can discover new categories while remembering the ones they already know. My work at the Institute of Artificial Intelligence and Robotics, advised by Prof. Yihong Gong, draws on continual learning and human analogical reasoning.","我在西安交通大学人工智能与机器人研究所攻读博士学位，导师为龚怡宏教授。我的研究关注视觉模型如何在识别已知类别的同时发现新类别，并探索持续学习和人类类比推理如何帮助模型保留和运用已有知识。")}</p>
+<div class="bio"><p>{bio_intro}</p><p>{bio_research}</p></div>
 <div class="profile-links">{link("mailto:"+EMAIL,icon("mail")+tr("Email","邮箱"),"primary")}{link(SCHOLAR,"Google Scholar")}{link("https://dblp.org/pid/339/5410.html","DBLP")}</div></div>
 <figure class="portrait"><div class="photo-mat"><img width="1913" height="1280" src="assets/jizhou-han.jpg?v=20261118" alt="{tr("Jizhou Han beside a cat mural","韩季洲与猫咪壁画")}"></div>
 <figcaption>{icon("pin")}{tr("Xi’an, China","中国 · 西安")}</figcaption></figure></section>
